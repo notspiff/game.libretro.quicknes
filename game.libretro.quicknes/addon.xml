@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="gameclient.quicknes"
+<addon id="game.libretro.quicknes"
 		name="QuickNES"
 		version="1.0.1"
 		provider-name="Libretro">
 	<requires>
-		<import addon="xbmc.libretro" version="1.0.0"/>
+		<import addon="game.libretro" version="1.0.0"/>
+		<import addon="game.controller.nes" version="1.0.0"/>
 	</requires>
-	<extension point="xbmc.gameclient"
-			library_android=""
-			library_linux="quicknes_libretro.so"
-			library_osx=""
-			library_windx=""
-			library_wingl="">
+	<extension point="kodi.gameclient"
+                   library_android="libgame.libretro.quicknes.so"
+                   library_linux="game.libretro.quicknes.so"
+                   library_osx="game.libretro.quicknes.dylib"
+                   library_windx="game.libretro.quicknes.dll"
+                   library_wingl="game.libretro.quicknes.dll">
 		<platforms>NES</platforms>
 		<extensions>nes</extensions>
 		<allowvfs>true</allowvfs>
@@ -24,9 +25,6 @@
 Supported files: .nes
 
 Source: https://github.com/libretro/QuickNES_Core</description>
-		<platform>linux</platform>
-		<noicon>true</noicon>
-		<nofanart>true</nofanart>
-		
+		<platform>all</platform>
 	</extension>
 </addon>
