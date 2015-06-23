@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buttonmap>
+	<controller id="game.controller.nes" type="joypad">
+		<feature name="a" mapto="a"/>
+		<feature name="b" mapto="b"/>
+		<feature name="start" mapto="start"/>
+		<feature name="select" mapto="select"/>
+		<feature name="up" mapto="up"/>
+		<feature name="down" mapto="down"/>
+		<feature name="right" mapto="right"/>
+		<feature name="left" mapto="left"/>
+	</controller>
+	<controller id="game.controller.nes.zapper" type="lightgun">
+		<feature name="trigger" mapto="trigger"/>
+	</controller>
+</buttonmap>
