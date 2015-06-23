@@ -31,7 +31,7 @@ endif()
 include(ExternalProject)
 externalproject_add(quicknes
                     GIT_REPOSITORY https://github.com/libretro/QuickNES_Core
-                    GIT_TAG bc2846d
+                    GIT_TAG 31f3fb8
                     PREFIX quicknes
                     CONFIGURE_COMMAND ""
                     INSTALL_COMMAND ""
