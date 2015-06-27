@@ -17,16 +17,19 @@ if("${CORE_SYSTEM_NAME}" STREQUAL "windows")
   set(BUILD_COMMAND ${MINGW_MAKE} -C libretro platform=win ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "linux")
   set(BUILD_COMMAND make -C libretro ${LIBRETRO_DEBUG})
+  message(FATAL_ERROR "QuickNES needs linux build command in CMakeLists.txt!")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "darwin")
   set(BUILD_COMMAND make -C libretro platform=osx ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "ios")
-  # TODO
+  message(FATAL_ERROR "QuickNES needs IOS build command in CMakeLists.txt!")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "android")
-  # TODO
+  message(FATAL_ERROR "QuickNES needs Android build command in CMakeLists.txt!")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "rbpi")
-  # TODO
+  message(FATAL_ERROR "QuickNES needs RPi build command in CMakeLists.txt!")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "freebsd")
-# TODO
+  message(FATAL_ERROR "QuickNES needs FreeBSD build command in CMakeLists.txt!")
+else()
+  message(FATAL_ERROR "Unknown system: ${CORE_SYSTEM_NAME}")
 endif()
 
 include(ExternalProject)
