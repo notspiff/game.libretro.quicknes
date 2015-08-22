@@ -1,0 +1,1 @@
+quicknes https://github.com/libretro/QuickNES_Core 6d5cd08
