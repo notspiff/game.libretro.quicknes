@@ -24,7 +24,9 @@
 
 Supported files: .nes
 
-License: GPL v2</description>
+License: GPL v2
+
+Icon credit: Garrett Brown</description>
 		<platform>all</platform>
 		<nofanart>true</nofanart>
 	</extension>
