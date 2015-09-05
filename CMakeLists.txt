@@ -7,7 +7,7 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 enable_language(CXX)
 
 find_package(kodi REQUIRED)
-find_package(quicknes REQUIRED)
+find_package(libretro-quicknes REQUIRED)
 
 set(DEPLIBS quicknes)
 set(QUICKNES_CUSTOM_BINARY ${QUICKNES_LIB}
