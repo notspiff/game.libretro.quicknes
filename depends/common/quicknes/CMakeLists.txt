@@ -14,11 +14,11 @@ endif()
 
 if("${CORE_SYSTEM_NAME}" STREQUAL "windows")
   find_package(MinGW REQUIRED)
-  set(BUILD_COMMAND ${MINGW_MAKE} -C libretro platform=win ${LIBRETRO_DEBUG})
+  set(BUILD_COMMAND ${MINGW_MAKE} platform=win ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "linux")
-  set(BUILD_COMMAND make -C libretro ${LIBRETRO_DEBUG})
+  set(BUILD_COMMAND make ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "darwin" OR "${CORE_SYSTEM_NAME}" STREQUAL "osx")
-  set(BUILD_COMMAND make -C libretro platform=osx ${LIBRETRO_DEBUG})
+  set(BUILD_COMMAND make platform=osx ${LIBRETRO_DEBUG})
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "ios")
   message(FATAL_ERROR "${PROJECT_NAME} needs IOS build command in CMakeLists.txt!")
 elseif("${CORE_SYSTEM_NAME}" STREQUAL "android")
@@ -40,7 +40,7 @@ externalproject_add(quicknes
                     BUILD_IN_SOURCE 1)
 
 #install the generated shared library
-install(FILES ${PROJECT_SOURCE_DIR}/libretro/quicknes_libretro${CMAKE_SHARED_LIBRARY_SUFFIX} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(FILES ${PROJECT_SOURCE_DIR}/quicknes_libretro${CMAKE_SHARED_LIBRARY_SUFFIX} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
 # write the nestopia-config.cmake script
 file(WRITE ${CMAKE_INSTALL_PREFIX}/libretro-quicknes-config.cmake "set(QUICKNES_LIB ${CMAKE_INSTALL_PREFIX}/lib/quicknes_libretro${CMAKE_SHARED_LIBRARY_SUFFIX})")
