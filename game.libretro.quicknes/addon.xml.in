@@ -20,9 +20,7 @@
 		<summary lang="en">NES / Famicom (QuickNES) 1.0-WIP</summary>
 		<description>The QuickNES core library, originally by Shay Green, heavily modified. QuickNES is a newer emulator that seems to have good compatibility.
 
-Supported files: .nes
-
-Icon credit: Garrett Brown</description>
+Supported files: .nes</description>
 		<license>LGPLv2.1+</license>
 		<platform>@PLATFORM@</platform>
 		<assets>
